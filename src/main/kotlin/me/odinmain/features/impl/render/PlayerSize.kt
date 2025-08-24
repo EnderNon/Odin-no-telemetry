@@ -46,7 +46,7 @@ object PlayerSize : Module(
     }.withDependency { isRandom }
 
     private var randoms: HashMap<String, RandomPlayer> = HashMap()
-    val isRandom get() = randoms.containsKey(mc.session?.username)
+    val isRandom get() = true
 
     data class RandomPlayer(val scale: Triple<Float, Float, Float>, val wings: Boolean = false, val wingsColor: Color = Colors.WHITE, val customName: String, val isDev: Boolean)
 
