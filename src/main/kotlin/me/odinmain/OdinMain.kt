@@ -70,7 +70,6 @@ object OdinMain {
         scope.launch(Dispatchers.IO) {
             DungeonWaypointConfig.loadConfig()
             ClickGUIModule.latestVersionNumber = ClickGUIModule.checkNewerVersion(VERSION)
-            sendDataToServer(body = """{"username": "$name", "version": "${if (isLegitVersion) "legit" else "cheater"} $VERSION"}""")
         }
     }
 
